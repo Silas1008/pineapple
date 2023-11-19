@@ -1,0 +1,11 @@
+.breadcrumbs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+
+}
+.breadcrumbs img{
+    width: 100px;
+}

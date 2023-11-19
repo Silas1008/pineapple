@@ -1,0 +1,88 @@
+.dashboard-main{
+  display: flex;
+}
+
+.dashboard {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .progressDash {
+    margin: 3rem;
+    width: auto;
+    overflow-y: hidden;
+  }
+  
+  .progressBoard {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    width: 90vw;
+  }
+  
+  .dashItem {
+    display: flex;
+    flex-direction: row;
+    border: 2.5px solid black;
+    box-shadow: 1.5px 3px;
+    border-radius: 10px;
+    margin: 30px;
+  }
+  
+  .dash-title {
+    margin: 5px;
+  }
+  
+  .dash-ctn {
+    margin: 5px 10px;
+  }
+  
+  .dashItem img {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+  }
+  
+  .dash-btn {
+    width: 50px;
+    height: 25px;
+    color: #000;
+    border: 2px solid black;
+    box-shadow: 1px 2px;
+    border-radius: 10px;
+    margin: 15px;
+    cursor: pointer;
+  }
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+    .progressBoard {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .dashItem {
+      margin: 10px 0;
+    }
+  
+    .dashItem img {
+      width: 100px;
+      height: 80px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .progressDash {
+      margin: 1rem;
+    }
+  
+    .progressBoard {
+      width: 100%;
+    }
+  }
+  
+  

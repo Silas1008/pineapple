@@ -1,0 +1,79 @@
+.calendar-main{
+    display: flex;
+}
+.Calendar {
+    height: 900px;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.Calendar h1 {
+    text-align: center;
+}
+
+.calendar-input input {
+    height: 30px;
+    width: 100%;
+    max-width: 300px; 
+    border: 2.5px solid black;
+    box-shadow: 1px 3px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.new-event {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.calendar-dashboard {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.calendar-button {
+    height: 30px;
+    width: 100%;
+    max-width: 200px; 
+    color: #fff;
+    background-color: #875194;
+    border: 2.5px solid black;
+    box-shadow: 1px 3px;
+    border-radius: 10px;
+}
+
+.datepicker {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .calendar-input input {
+        width: 300px;
+    }
+
+    .calendar-button {
+        width: auto;
+    }
+
+    .datepicker {
+        flex-direction: row; 
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .Calendar {
+        height: 1200px; 
+    }
+}

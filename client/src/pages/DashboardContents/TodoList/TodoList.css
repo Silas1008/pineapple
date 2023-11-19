@@ -1,0 +1,82 @@
+.todo-list-main{
+    display: flex;
+}
+
+.todo-list {
+    height: 100vh;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    width: 80%;
+    max-width: 300px;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+.todo-list button {
+    width: 80%;
+    max-width: 200px;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.todo-list h2 {
+    font-size: 25px;
+    color: white;
+    text-transform: capitalize;
+}
+
+.todo-list p {
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.list-cards {
+    width: 80%;
+    max-width: 500px;
+    background-color: #693B5F;
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+.edit-delete {
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    form input,
+    .todo-list button,
+    .list-cards {
+        width: 90%;
+        max-width: none;
+    }
+}
