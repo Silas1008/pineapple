@@ -1,0 +1,7 @@
+#color-picker-main{
+    display: flex;
+    gap: 50px;
+}
+.color-picker{
+    margin-top: 50px;
+}

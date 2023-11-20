@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import axios from 'axios';
@@ -16,6 +15,31 @@ import OptionBar from './components/OptionBar/OptionBar';
 import Calendar from './pages/DashboardContents/Calendar/Calendar';
 import TextEditor from './pages/DashboardContents/TextEditor/Text-editor';
 import TodoList from './pages/DashboardContents/TodoList/TodoList';
+import { useNavigate } from 'react-router-dom';
+import ColorPicker from './pages/DashboardContents/ColorPicker/ColorPicker';
+import ImageUpload from './components/DashboardContent/imageUpload/imageUpload';
+
+const ProtectedRoute = ({ element, auth }) => {
+  const navigate = useNavigate();
+
+//   useEffect(() => {
+//     if (!auth) {
+     
+//       navigate('/login');
+//     }
+//   }, [auth, navigate]);
+
+//   return auth ? element : null;
+// };
+
+  useEffect(() => {
+    if (!auth) {
+      navigate('/breadcrumbs');
+    }
+  }, [auth, navigate]);
+
+  return auth ? element : null;
+};
 
 const App = () => {
   const [auth, setAuth] = useState(false);
@@ -24,20 +48,20 @@ const App = () => {
     try {
       await axios.get('http://localhost:8080/logout');
       setAuth(false);
+      return <Navigate to="/login" />;
     } catch (error) {
       console.error('Error during logout:', error);
     }
   };
 
-useEffect(() => {
-  const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
-  if (token) {
-    setAuth(true);
-  }
-}, []);
+  useEffect(() => {
+    const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
+    if (token) {
+      setAuth(true);
+    }
+  }, []);
 
-
- return (
+  return (
     <CourseContextProvider>
       <BrowserRouter>
         <Navbar auth={auth} handleLogout={handleLogout} />
@@ -45,26 +69,26 @@ useEffect(() => {
         <Routes>
           <Route
             path="/dashboard"
-            element={auth ? <Dashboard auth={auth} /> : <Navigate to="/breadcrumbs" />}
+            element={<ProtectedRoute auth={auth} element={<Dashboard auth={auth} />} />}
           />
-          
           <Route path="/login" element={<Login auth={auth} setAuth={setAuth} />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/breadcrumbs" element={<Breadcrumbs />} />
-          <Route path='/calendar' element={<Calendar/>}/>
-          <Route path='/texteditor' element={<TextEditor/>}/>
-          <Route path='/todolist' element={<TodoList/>}/>
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/texteditor" element={<TextEditor />} />
+          <Route path="/todolist" element={<TodoList />} />
+          <Route path="/colorpicker" element={<ColorPicker/>}/>
+          <Route path="/imageupload" element={<ImageUpload/>}/>
           <Route
             path="/courses"
-            element={auth ? <Courses /> : <Navigate to="/breadcrumbs" />}
+            element={<ProtectedRoute auth={auth} element={<Courses />} />}
           />
           <Route
             path="/snippets"
-            element={auth ? <Snippets /> : <Navigate to="/breadcrumbs" />}
+            element={<ProtectedRoute auth={auth} element={<Snippets />} />}
           />
           <Route path="/snippets/:id" element={<ProductDetails />} />
         </Routes>
-
         <Footer />
       </BrowserRouter>
     </CourseContextProvider>
