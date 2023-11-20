@@ -1,0 +1,102 @@
+// Colors
+$page-background-color: #2F3C4F;
+$gradient-color-1: #F57170;
+$gradient-color-2: #10DDC2;
+
+// Keyframes
+@keyframes animationgradienttitle {
+  0% {
+      background-position: 0 1600px;
+  }
+  100% {
+      background-position: 1600px 0;
+  }
+}
+
+// Tag Selectors
+.gradients {
+    background: radial-gradient(circle farthest-side at bottom right, #ff0000, #ffa500, #ffff00, #00ff00, #0000ff, #ee82ee);
+    background-size: 1000% 500%;
+    -webkit-animation: gradientbg 15s ease infinite;
+    -moz-animation: gradientbg 15s ease infinite;
+    animation-name: gradientbg;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-delay: "";
+    animation-iteration-count: infinite;
+    animation-direction: "";
+    animation-fill-mode: "";
+  }
+    
+      
+   @-webkit-keyframes gradientbg {
+      0%{background-position:0% 7%}
+      50%{background-position:100% 94%}
+      100%{background-position:0% 7%}
+  }
+  @-moz-keyframes gradientbg {
+      0%{background-position:0% 7%}
+      50%{background-position:100% 94%}
+      100%{background-position:0% 7%}
+  }
+  @keyframes gradientbg {
+      0%{background-position:0% 7%}
+      50%{background-position:100% 94%}
+      100%{background-position:0% 7%}
+  }
+  
+
+.gradients { 
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height:80vh;
+}
+
+.c-article {
+  text-align: center;
+  background-color: $page-background-color;
+}
+
+.c-article h1 {
+  margin: 0;
+}
+
+.c-article__header {
+  position: relative;
+}
+
+.c-article__title {
+  font-family: 'Scope One', serif;
+  font-size: 3em;
+  color: #fc3735;
+  background: -webkit-linear-gradient(left, $gradient-color-1,$gradient-color-2 , $gradient-color-1);
+  background-size: 1600px 200px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 3s;
+  animation-name: animationgradienttitle;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.u-font-lora {
+  font-family: 'Lora', serif;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .gradients {
+    height: 600px;
+  }
+  .c-article__title {
+    font-size: 20px;
+  }
+  .c-article {
+    width: 300px;
+    padding:20px 0;
+  }
+  .font-lora {
+    font-size: 25px;
+  }
+}

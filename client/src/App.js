@@ -16,6 +16,16 @@ import OptionBar from './components/OptionBar/OptionBar';
 import Calendar from './pages/DashboardContents/Calendar/Calendar';
 import TextEditor from './pages/DashboardContents/TextEditor/Text-editor';
 import TodoList from './pages/DashboardContents/TodoList/TodoList';
+import TextAnimation from './pages/OptionBarContent/TextAnimation/TextAnimation';
+import Hover from './pages/OptionBarContent/Hover/Hover';
+import Svg from './pages/OptionBarContent/SVG/Svg';
+import Masking from './pages/OptionBarContent/Masking/Masking';
+import Shape from './pages/OptionBarContent/Shape/Shape'
+import InitialLetters from './pages/OptionBarContent/InitialLetters/InitialLetters';
+import Flexbox from './pages/OptionBarContent/Flexbox/Flexbox';
+import Gradients from './pages/OptionBarContent/Gradients/Gradients';
+import Properties from './pages/OptionBarContent/Properties/Properties';
+import Home from './pages/Home/Home.jsx';
 
 const App = () => {
   const [auth, setAuth] = useState(false);
@@ -48,12 +58,23 @@ useEffect(() => {
             element={auth ? <Dashboard auth={auth} /> : <Navigate to="/breadcrumbs" />}
           />
           
+          <Route path="/home" element={<Home/>}/>
           <Route path="/login" element={<Login auth={auth} setAuth={setAuth} />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/breadcrumbs" element={<Breadcrumbs />} />
           <Route path='/calendar' element={<Calendar/>}/>
           <Route path='/texteditor' element={<TextEditor/>}/>
           <Route path='/todolist' element={<TodoList/>}/>
+         <Route path="/text" element={<TextAnimation/>}/>
+         <Route path="/hover" element={<Hover/>}/>
+         <Route path="/svg" element={<Svg/>}/>
+         <Route path="/masking" element={<Masking/>}/>
+         <Route path="/shape" element={<Shape/>}/>
+         <Route path="/initialletter" element={<InitialLetters/>}/>
+        <Route path="/flex" element={<Flexbox/>}/>
+        <Route path="/gradients" element={<Gradients/>}/>
+        <Route path="/properties" element={<Properties/>}/>
+
           <Route
             path="/courses"
             element={auth ? <Courses /> : <Navigate to="/breadcrumbs" />}

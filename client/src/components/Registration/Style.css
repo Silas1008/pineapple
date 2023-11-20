@@ -1,18 +1,123 @@
-.Signup,
-.Login
-{
+.logging,
+.signing{
     display: flex;
     align-items: center;
     justify-content: center;
     width:100vw;
     height:80vh;
 }
-.Signup-animation,
-.login-animation
-{
+.logging-animate,
+.signing-animate {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     border: 2.5px solid #000;
     border-radius: 10px;
     box-shadow: 2px 3px;
+   
+}
+.signAnimate {
+     height:100%;
+}
+
+.name ,
+.email ,
+.password {
+    margin-top:5px;
+    margin-bottom:15px;
+    width:300px;
+    height:50px;
+    padding-left:10px;
+    border: 2.5px solid #000;
+    border-radius: 5px;
+    box-shadow: 2px 3px;
+}
+.res-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #875194;
+    width:100px;
+    height:30px;
+    margin-top:20px;
+    border: 2.5px solid #000;
+    border-radius: 20px;
+    box-shadow: 2px 3px;
+    cursor:pointer;
+}
+
+.res-btn:hover{
+    background-color: coral;
+}
+
+.login-link{
+    text-decoration: none;
+}
+.agreement {
+    display: flex;
+    align-items: center;
+    font-size:12px;
+    font-weight:500;
+}
+
+.sign {
+    text-align: center; 
+    padding:10px;
+    font-size:15px;
+    font-weight:500;
+}
+.signup-link {
+    font-size: 15px;
+    text-decoration:none;
+}
+.signup-link:hover {
+    color:red;
+}
+/* sign-up */
+.sign-up form,
+.login form{
+    padding:30px;
+}
+
+.sign-up h1,
+.login h1 {
+    text-align: center;
+    font-size: 22px;
+    font-weight:500;
+    color:#875194;
+    text-decoration: none;
+    padding-bottom:10px;    
+}
+
+.loginStatus {
+    text-align: center;
+    font-size:20px;
+    color: rgb(200, 68, 68);
+    padding:20px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .signing,
+    .logging{
+        height:100%;
+    }
+    .signAnimate {
+        display:none;
+    }
+    .signing-animate,
+    .logging-animate {
+        padding: 100px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        border: none;
+        box-shadow: none;
+        margin-right:5px;
+    }
+    .sign-up,
+    .login{
+        border: 2.5px solid #000;
+        border-radius: 10px;
+        box-shadow: 2px 3px;
+    }
 }

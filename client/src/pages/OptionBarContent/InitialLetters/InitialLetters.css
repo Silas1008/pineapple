@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,600&display=swap");
+
+
+.initial-letters {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.initial{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 600px;
+	font-size: 20px;
+	line-height: 1.5;
+	font-kerning: normal;
+}
+
+.initial-h5 {
+	max-width: 40ch;
+}
+.initial-h5:first-letter {
+	float: left;
+	font-family: "Montagu Slab", serif;
+	font-size: 8rem;
+	line-height: 1;
+	color: #d9381e;
+	margin-right: 0.5rem;
+
+	/* styling optional */
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black,
+		-0.25rem 0.25rem rgba(0 0 0 / 0.15);
+}
+
+/* section-two */
+
+.initial-news {
+	width: 800px;
+	margin: auto;
+	padding: 50px;
+	border: 10px solid rgb(20, 120, 252);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.initial-title {
+	padding: 10px 0;
+}
+
+.first-paragraph{
+	padding: 10px 0;
+}
+
+
+/* Appling the first-letter pseudo element to the first paragraph */
+
+.first-paragraph::first-letter {
+	font-size: 300%;
+	color: rgb(20, 120, 252);
+	float: left;
+	padding: 0 7px;
+	font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+	
+	.initial-h5 {
+		font-size:15px;
+		
+	}
+	.initial {
+		height:550px;
+		width: 270px;
+		display: flex;
+		margin:0 50px;
+	}
+
+	.pseudo{
+		height:100%;
+	}
+	.initial-news {
+		width:700px;
+		border: 3px solid rgb(20, 120, 252);
+		margin-bottom:50px;
+		padding:20px;
+	}
+	.news p {
+		font-size:15px;
+		font-weight:500;
+	}
+	.news h1 {
+		font-size:15px;
+	}
+
+}

@@ -30,33 +30,42 @@ const Signup = () => {
   };
 
   return (
-    <div className='Signup'>
-      <div className='Signup-animation'>
-      <SignupAnimate/>
+    <div className='signing'>
+      <div className='signing-animate'>
+      <div>
+      <div className='signAnimate'>
+      <SignupAnimate />
       </div>
-      <div className='signup-form'>
-        <div>Welcome to pineApple</div>
+      </div>
+      <div className='sign-up'>
+        <h1>Welcome to pineApple</h1>
         <form onSubmit={handleSubmit}>
-          <div className='name'>
-            <label>Name</label>
-            <input type='text' placeholder='Enter Name' name='name' onChange={e => setValues({ ...values, name: e.target.value })} />
-          </div>
-          <div className='email'>
-            <label>Email</label>
-            <input type='text' placeholder='Enter email' name='email' onChange={e => setValues({ ...values, email: e.target.value })} />
+          <div>
+            <label>Name</label><br/>
+            <input type='text' 
+            className='name'
+            placeholder='Enter Name' name='name' onChange={e => setValues({ ...values, name: e.target.value })} />
           </div>
           <div>
-            <label>Password</label>
-            <input type='password' placeholder='Enter password' name='password' onChange={e => setValues({ ...values, password: e.target.value })} />
+            <label>Email</label><br/>
+            <input type='text' 
+             className='email'
+            placeholder='Enter email' name='email' onChange={e => setValues({ ...values, email: e.target.value })} />
+          </div>
+          <div>
+            <label>Password</label><br/>
+            <input type='password' 
+            className='password' placeholder='Enter password' name='password' onChange={e => setValues({ ...values, password: e.target.value })} />
           </div>
           <div className='agreement'>
-            <input type='checkbox' /> <p>I agree to the terms and conditions</p>
+            <input type='checkbox'/> I agree to the terms and conditions
           </div>
-          <button className='signup-button'>Register</button>
-          <div>
-            <p>Already have an account? <Link to='/login'>Login</Link> here</p>
+          <button className='res-btn'>Register</button>
+          <div >
+            <p className='sign'>Already have an account? <Link to='/login' className='signup-link'>Login</Link> here</p>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );

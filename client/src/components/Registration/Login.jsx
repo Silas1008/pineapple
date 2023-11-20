@@ -34,29 +34,32 @@ const Login = ({ auth, setAuth }) => {
     }
   };
   return (
-    <div className='Login'>
-      <div className='login-animation'>
-      <LoginAnimate/>
+    <div className='logging'>
+      <div className='logging-animate'>
+      <div >
+      <div className='signAnimate'><LoginAnimate/></div>
       </div>
-      <div className='login-form'>
-        <div>Welcome back!</div>
+      <div className='login'>
+        <h1>Welcome back!</h1>
         <form onSubmit={handleSubmit}>
-          <div className='email'>
-            <label>Email</label>
+          <div >
+            <label>Email</label><br/>
             <input
               type='text'
               placeholder='Enter email'
               name='email'
+              className='email'
               onChange={(e) => setValues({ ...values, email: e.target.value })}
             />
           </div>
 
-          <div className='password'>
-            <label>Password</label>
+          <div >
+            <label>Password</label><br/>
             <input
               type='password'
               placeholder='Enter password'
               name='password'
+              className='password'
               onChange={(e) => setValues({ ...values, password: e.target.value })}
             />
           </div>
@@ -65,19 +68,22 @@ const Login = ({ auth, setAuth }) => {
             type='checkbox'
             checked={keepLoggedIn}
             onChange={() => setKeepLoggedIn(!keepLoggedIn)}
+            className='checkbox'
           />
-          <p>Keep me logged in</p>
+          Keep me logged in
         </div>
-          <button className='login-button' type='submit'>
+          <button type='submit'
+          className="res-btn">
             Login
           </button>
           <div>
-            <p>
-              Not yet a member <Link to='/signup'>Signup </Link>now.
+            <p className='sign'>
+              Not yet a member <Link to='/signup' className='signup-link ' >Signup </Link>now.
             </p>
           </div>
         </form>
       </div>
+     </div>
     </div>
   );
 };
