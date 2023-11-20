@@ -5,21 +5,32 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon registration.js"
+    "start": "concurrently \"node registration.js\" \"node todolist.js\" \"node imageUpload.js\"",
+    "devStart": "concurrently \"nodemon registration.js\" \"nodemon todolist.js\" \"nodemon imageUpload.js\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.2",
     "bcrypt": "^5.1.1",
+<<<<<<< HEAD
     "body": "^5.1.0",
+=======
+>>>>>>> 57d099059965abe25be65a9d24ba858dbcd51914
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
     "mysql": "^2.18.1",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "npm-path": "^2.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

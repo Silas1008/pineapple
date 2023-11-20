@@ -18,4 +18,9 @@ export const DashboardSideBarData = [
         icon: <TextFormatIcon/>,
         link:'/texteditor'
     },
+    {
+        title: 'Color Picker',
+        icon: <TextFormatIcon/>,
+        link:'/colorpicker'
+    }
 ]

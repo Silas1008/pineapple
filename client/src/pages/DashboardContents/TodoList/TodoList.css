@@ -1,82 +1,77 @@
-.todo-list-main{
-    display: flex;
+.progress-list{
+  display: flex;
+  gap: 20%;
+  margin-top: 16px;
 }
-
 .todo-list {
-    height: 100vh;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 80vh;
+    margin-top: 50px;
+  }
+  
+  .title {
+    margin-bottom: 10px;
+  }
+  
+  .todo-list label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .todo-list input[type='text'] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+
+  .task {
+    margin-bottom: 20px;
+  }
+  
+ 
+  .todo-list button {
+    background-color: #7D404C;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .todo-list button:hover {
+    background-color: #45a049;
+  }
+
+  .task-list-result{
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 8px;
     text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-form input {
-    width: 80%;
-    max-width: 300px;
-    height: 30px;
-    border: 3px solid black;
-    border-radius: 8px;
-    margin: 10px;
-    margin-top: 20px;
-}
-
-form label {
-    margin-top: 10px;
-}
-
-.todo-list button {
-    width: 80%;
-    max-width: 200px;
-    height: 30px;
-    border: 3px solid black;
-    border-radius: 8px;
-    margin: 10px;
-    margin-top: 20px;
-}
-
-.todo-list h2 {
-    font-size: 25px;
-    color: white;
+    background-color: #6A9481;
     text-transform: capitalize;
-}
+    margin-bottom: 20px;
+  }
+  #updateInput{
+    width: 100px;
+    height: 20px;
+  }
+  
 
-.todo-list p {
-    font-size: 18px;
-    color: white;
-    font-weight: 700;
-    text-transform: capitalize;
-}
-
-.results {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    gap: 20px;
-}
-
-.list-cards {
-    width: 80%;
-    max-width: 500px;
-    background-color: #693B5F;
-    height: 100px;
-    border: 3px solid black;
-    border-radius: 8px;
-}
-
-.edit-delete {
-    color: white;
-}
-
-@media only screen and (max-width: 600px) {
-    form input,
-    .todo-list button,
-    .list-cards {
-        width: 90%;
-        max-width: none;
+  @media (max-width: 600px) {
+    .todo-list div {
+      margin: 10px;
+      padding: 10px;
     }
-}
+  
+    .todo-list input[type='text'] {
+      width: 100%;
+    }
+  }
