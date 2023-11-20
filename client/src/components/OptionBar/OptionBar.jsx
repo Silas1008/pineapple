@@ -11,7 +11,7 @@ const OptionBar = () => {
         <Link to='/svg'><button>SVG</button></Link>
         <Link to='/masking'><button>Masking</button></Link>
         <Link to='/shape'><button>Shape</button></Link>
-        <Link to='/initialletter'><button>Initial Letter</button></Link>
+        <Link to='/initialletters'><button>Initial Letter</button></Link>
         <Link to='/flex'><button>Flexbox</button></Link>
         <Link to='/gradients'><button>Gradients</button></Link>
         <Link to='/properties'><button>Properties</button></Link>

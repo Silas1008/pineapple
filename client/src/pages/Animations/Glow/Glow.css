@@ -1,0 +1,120 @@
+.glow{
+    text-align:center;
+    height: 100%;
+    width:100%;
+  }
+
+  .animate-glow{
+    display: flex;
+  
+  }
+
+ .glow-text{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:4rem;
+    height:80vh;
+    color:#FFD3E6;
+    letter-spacing:5px;
+    animation-name:glow-pine;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+  }
+  .glow-h1 {
+    font-family: 'Merienda', cursive;
+  }
+  
+  @keyframes glow-pine{
+    from{text-shadow:0px 0px 5px #f45151,0px 0px 5px #f45151;}
+    to{text-shadow:0px 0px 20px #f45151,0px 0px 20px #f45151;}
+  }
+
+  /* section-two */
+  .animated-border-box, .animated-border-box-glow{
+    max-height: 400px;
+    max-width: 450px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden; 
+    z-index: 0;
+    /* Border Radius */
+      border-radius: 10px;
+  }
+  
+  .animated-border-box-glow{
+    overflow: hidden;
+    /* Glow Blur */
+    filter: blur(50px);
+  }
+  
+  .animated-border-box:before, .animated-border-box-glow:before {
+    content: '';
+    z-index: -2;
+    text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+      width: 99999px;
+      height: 99999px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    /*border color, change middle color*/
+      background-image: conic-gradient(rgba(0,0,0,0), #1976ed, rgba(0,0,0,0) 25%);
+    /* change speed here */
+      animation: rotate 4s linear infinite;
+  }
+  
+  .animated-border-box:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+    /* border width */
+      left: 5px;
+      top: 5px;
+    /* double the px from the border width left */
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+    /*bg color*/
+      background: #292a2e;
+    /*box border radius*/
+      border-radius: 7px;
+  }
+  
+  @keyframes rotate {
+      100% {
+          transform: translate(-50%, -50%) rotate(1turn);
+      }
+  }
+  
+  /*// Border Animation END//*/
+  
+   
+  .center-box{
+    height: 50vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:100px ;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .glow-text {
+      height:530px;
+    }
+    
+    .glow-h1 {
+      font-size:55px;
+    }
+
+    .animated-border-box,
+    .animated-border-box-glow {
+      height: 200px;
+      width: 250px;
+    }
+  }
+  

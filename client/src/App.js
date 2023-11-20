@@ -16,6 +16,22 @@ import Calendar from './pages/DashboardContents/Calendar/Calendar';
 import TextEditor from './pages/DashboardContents/TextEditor/Text-editor';
 import TodoList from './pages/DashboardContents/TodoList/TodoList';
 import ProtectedRoute from './components/PrivateRoute';
+import Home from './pages/Home/Home';
+import TextAnimation from './pages/OptionBarContent/TextAnimation/TextAnimation';
+import Hover from './pages/OptionBarContent/Hover/Hover';
+import Svg from './pages/OptionBarContent/svgCss/Svg';
+import Masking from './pages/OptionBarContent/Masking/Masking';
+import Shape from './pages/OptionBarContent/Shape/Shape';
+import InitialLetters from './pages/OptionBarContent/InitialLetters/InitialLetters';
+import Flexbox from './pages/OptionBarContent/Flexbox/Flexbox';
+import Gradients from './pages/OptionBarContent/Gradients/Gradients';
+import Properties from './pages/OptionBarContent/Properties/Properties';
+import Types from './pages/Types/Types';
+import Bounce from './pages/Animations/Bounce/Bounce';
+import Color from './pages/Animations/Color/Color';
+import Glow from './pages/Animations/Glow/Glow';
+
+
 
 const App = () => {
   const [auth, setAuth] = useState(false);
@@ -54,6 +70,23 @@ const App = () => {
           <Route path='/calendar' element={<Calendar/>}/>
           <Route path='/texteditor' element={<TextEditor/>}/>
           <Route path='/todolist' element={<TodoList/>}/>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/text'  element={<TextAnimation/>}/>
+          <Route path='/hover' element={<Hover/>}/>
+          <Route path='/svg' element={<Svg/>}/>
+          <Route path='/masking' element={<Masking/>}/>
+          <Route path='/shape' element={<Shape/>}/>
+          <Route path='/initialletters' element={<InitialLetters/>}/>
+          <Route path='/flex' element={<Flexbox/>}/>
+          <Route path='/gradients' element={<Gradients/>}/>
+          <Route path='/properties' element={<Properties/>}/>
+          <Route path='/types' element={<Types/>}/>
+          <Route path='/bounce' element={<Bounce/>}/>
+          <Route path='/color' element={<Color/>}/>
+          <Route path='/glow' element={<Glow/>}/>
+          
+
+
           <Route
             path="/courses"
             element={<ProtectedRoute auth={auth} element={<Courses />} />}

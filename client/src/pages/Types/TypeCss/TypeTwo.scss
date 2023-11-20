@@ -1,0 +1,60 @@
+.type-two {
+  margin-top: 100px;
+  background-color: #444;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  perspective: 1200px;
+}
+
+.steps {
+  position: relative;
+  transform: translateY(100px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+
+  //colors:
+  --door: maroon;
+  --dark: #222;
+  --stepTop: #ddd;
+  --stepSide: #777;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 480px;
+    left: -240px;
+    background-repeat: no-repeat;
+    transition: inherit;
+  }
+
+  &::before {
+    bottom: 0;
+    height: 400px;
+    background-image: conic-gradient(at 80px 160px, var(--stepSide) 0 135deg, var(--stepTop) 0 270deg, var(--door) 0), linear-gradient(45deg, var(--dark) 0 28px, var(--stepTop) 0 113px, transparent 0), linear-gradient(to right, var(--dark) 0 40px, var(--stepSide) 0 160px), linear-gradient(45deg, var(--dark) 0 57px, var(--stepTop) 0 141px, transparent 0), linear-gradient(to right, var(--dark) 0 80px, var(--stepSide) 0 200px), linear-gradient(45deg, var(--dark) 0 85px, var(--stepTop) 0 170px, transparent 0), linear-gradient(-45deg, var(--dark), transparent 50%);
+    background-size: 120px 200px, 160px 40px, 160px 40px, 200px 40px, 200px 40px, 240px 40px, 200px 200px;
+    background-position: 240px 0, 240px 200px, 240px 240px, 240px 280px, 240px 320px, 240px 360px, 40px 200px;
+    transform-origin: bottom;
+  }
+
+  &::after {
+    top: 0;
+    height: 200px;
+    background-image: linear-gradient(135deg, var(--dark) 0 85px, var(--stepSide) 0 170px, transparent 0), linear-gradient(to right, var(--dark) 0 80px, var(--stepTop) 0 200px), linear-gradient(135deg, var(--dark) 0 57px, var(--stepSide) 0 141px, transparent 0), linear-gradient(to right, var(--dark) 0 40px, var(--stepTop) 0 200px), linear-gradient(135deg, var(--dark) 0 28px, var(--stepSide) 0 113px, transparent 0), linear-gradient(-135deg, var(--dark), transparent 50%);
+    background-size: 240px 40px, 200px 40px, 200px 40px, 160px 40px, 160px 40px, 200px 200px;
+    background-position: 240px 0, 240px 40px, 240px 80px, 240px 120px, 240px 160px, 40px 0;
+    transform-origin: top;
+  }
+
+  &:hover {
+    transform: translateY(100px) rotateX(17deg) rotateY(22.5deg) rotateZ(-22.5deg);
+
+    &::before {
+      transform: rotateX(-45deg);
+    }
+    &::after {
+      transform: rotateX(45deg);
+    }
+  }
+}

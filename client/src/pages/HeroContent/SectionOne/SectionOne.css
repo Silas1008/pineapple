@@ -3,10 +3,11 @@
   padding-bottom: 50px;
   padding-top: 50px;
   margin-bottom: 50px;
+  height:100vh;
 }
 
 
-ul 
+.clock ul 
 { list-style:none; margin:0; padding:0 }
 
 #watch { 
@@ -296,7 +297,7 @@ to { transform:translateY(-120em) }
 }
 
 .clock {
-  height:550px;
+  height:100%;
   margin-top:-400px;
 
 }
