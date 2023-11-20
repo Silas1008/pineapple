@@ -29,14 +29,14 @@ const TodoList = () => {
     setLoading(true);
 
     if (editingTaskId) {
-      // Edit existing task
+      
       axios.put(`http://localhost:8081/api/edit/${editingTaskId}`, { title, task })
         .then(() => {
           alert("Task edited");
           setTitle("");
           setTask("");
           setEditingTaskId(null);
-          refreshTaskList(); // Added to refresh the task list after editing
+          refreshTaskList(); 
         })
         .catch((error) => {
           console.error("Error editing task:", error);
@@ -45,13 +45,13 @@ const TodoList = () => {
           setLoading(false);
         });
     } else {
-      // Add new task
+      
       axios.post('http://localhost:8081/api/insert', { title, task })
         .then(() => {
           alert("Task added");
           setTitle("");
           setTask("");
-          refreshTaskList(); // Added to refresh the task list after adding
+          refreshTaskList(); 
         })
         .catch((error) => {
           console.error("Error adding task:", error);
@@ -66,7 +66,7 @@ const TodoList = () => {
     axios.delete('http://localhost:8081/api/delete', { data: { id: taskId } })
       .then(() => {
         alert("Task deleted");
-        refreshTaskList(); // Added to refresh the task list after deleting
+        refreshTaskList(); 
       })
       .catch((error) => {
         console.error("Error deleting task:", error);
@@ -74,7 +74,7 @@ const TodoList = () => {
   };
 
   const editTask = (taskId) => {
-    // Find the task to edit based on the taskId
+    
     const taskToEdit = taskList.find((task) => task.id === taskId);
     if (taskToEdit) {
       setEditingTaskId(taskId);

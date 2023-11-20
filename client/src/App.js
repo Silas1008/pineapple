@@ -15,7 +15,7 @@ import OptionBar from './components/OptionBar/OptionBar';
 import Calendar from './pages/DashboardContents/Calendar/Calendar';
 import TextEditor from './pages/DashboardContents/TextEditor/Text-editor';
 import TodoList from './pages/DashboardContents/TodoList/TodoList';
-
+import ProtectedRoute from './components/PrivateRoute';
 
 const App = () => {
   const [auth, setAuth] = useState(false);
