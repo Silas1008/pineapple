@@ -8,6 +8,11 @@
     color: #fff;
     height: 50px;
     position: relative; 
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+
   }
   
   .burger-menu {
@@ -70,7 +75,9 @@
     }
     .navbar .logo{
         font-size: 15px;
-        padding: 10px;
+        position:relative;
+        top:-8px;
+        left:-10px;
     }
     .nav-links {
       display: none; 
@@ -80,6 +87,11 @@
     .navbar.menu-open .nav-links {
       display: flex; 
       height: 150px;
+    }
+    .navbar {
+      position:fixed;
+      top:0;
+      width:100%;
     }
   }
   

@@ -1,9 +1,8 @@
 .landing {
-	height: 80vh;
+	height: 100vh;
 	display: grid;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 20px;
   }
   
   .container-one {
@@ -12,6 +11,7 @@
 	font-family: monospace;
 	border-right: 5px solid black;
 	width: 100%;
+	margin-top:120px;
 	white-space: nowrap;
 	overflow: hidden;
 	animation: typing 4s steps(14, end), anim .4s step-end infinite;

@@ -30,7 +30,9 @@ import Types from './pages/Types/Types';
 import Bounce from './pages/Animations/Bounce/Bounce';
 import Color from './pages/Animations/Color/Color';
 import Glow from './pages/Animations/Glow/Glow';
-
+import Houdini from './pages/Animations/Houdini/Houdini';
+import Architecture from './pages/Animations/Architecture/Architecture';
+import Grid from './pages/Animations/Grid/Grid';
 
 
 const App = () => {
@@ -84,7 +86,9 @@ const App = () => {
           <Route path='/bounce' element={<Bounce/>}/>
           <Route path='/color' element={<Color/>}/>
           <Route path='/glow' element={<Glow/>}/>
-          
+          <Route path='/houdini' element={<Houdini/>}/>
+          <Route path='/architecture' element={<Architecture/>}/>
+          <Route path='/grid' element={<Grid/>}/>
 
 
           <Route

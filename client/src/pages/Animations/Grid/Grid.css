@@ -1,0 +1,99 @@
+.grid {
+    height: 100%;
+    padding: 150px 150px;
+}
+
+.grid h2 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 40px;
+}
+.grid-container {
+    width: 100% ;
+    font-size: 10px;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 1rem;
+    grid-template-areas:
+     "box1 box1 box2 box3"
+     "box1 box1 box4 box3"
+     "box5 box6 box7 box7"
+     "box8 box8 box9 box10";
+}
+
+.grid-container .grid-element {
+    background: #2f6262;
+    transition: all 250ms;
+    font-size: 5rem;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    animation: fadein 1s ease-out normal backwards;
+}
+
+.grid-container .grid-element:hover {
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 1.5rem 2.8rem rgba(0,0,0,0.15), 0 1rem 1rem rgba(0,0,0,0.15);
+    transform: translate(0,-0.0.5rem) scale(1.01);
+}
+
+.grid-container .el1 { grid-area: box1; animation-delay:0;}
+.grid-container .el2 { grid-area: box2; animation-delay:100ms;}
+.grid-container .el3 { grid-area: box3; animation-delay:200ms;}
+.grid-container .el4 { grid-area: box4; animation-delay:200ms;}
+.grid-container .el5 { grid-area: box5; animation-delay:100ms;}
+.grid-container .el6 { grid-area: box6; animation-delay:200ms;}
+.grid-container .el7 { grid-area: box7; animation-delay:300ms;}
+.grid-container .el8 { grid-area: box8; animation-delay:200ms;}
+.grid-container .el9 { grid-area: box9; animation-delay:400ms;}
+.grid-container .el0 { grid-area: box10; animation-delay:500ms;}
+
+
+@keyframes fadein {
+    0% {transform: scale(0);}
+    70% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        width:100%;
+        height: 100%;
+        padding: 150px 50px;
+        margin-left: -20px;
+    }
+    
+    .grid h2 {
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-size: 40px;
+    }
+    .grid-container {
+        width: 100% ;
+        font-size: 5px;
+        display: grid;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-gap: 1rem;
+        grid-template-areas:
+         "box1 box1 box2 box3"
+         "box1 box1 box4 box3"
+         "box5 box6 box7 box7"
+         "box8 box8 box9 box10";
+    }
+    
+    .grid-container .grid-element {
+        background: #2f6262;
+        transition: all 250ms;
+        font-size: 2rem;
+        color: white;
+        font-family: sans-serif;
+        box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        animation: fadein 1s ease-out normal backwards;
+    }
+    
+}

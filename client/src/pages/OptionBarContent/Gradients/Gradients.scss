@@ -50,7 +50,7 @@ $gradient-color-2: #10DDC2;
     display: flex;
    justify-content: center;
    align-items: center;
-   height:80vh;
+   height:100vh;
 }
 
 .c-article {
@@ -87,7 +87,7 @@ $gradient-color-2: #10DDC2;
 }
 @media only screen and (max-width: 768px) {
   .gradients {
-    height: 600px;
+    height: 100vh;
   }
   .c-article__title {
     font-size: 20px;

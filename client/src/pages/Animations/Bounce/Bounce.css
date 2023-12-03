@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height:550px;
+    height:100vh;
 }
 .bounce {
     background-color: #fdf9fd;
@@ -110,9 +110,10 @@
 
 /* section-two */
 .bounce-two {
-    width: 100%;
+  display: block;
+    width: 100vh;
     height: 100%;
-    padding-top: 150px;
+    margin-left:400px;
 }
 
 .bounce-two h1 {
@@ -178,10 +179,10 @@
     100% { transform: scale(1); }
   }
 
-  .bounce {
-    animation: bounce 2s ease infinite;
+  .bounce1 {
+    animation: bounce1 2s ease infinite;
   }
-  @keyframes bounce {
+  @keyframes bounce1 {
       70% { transform:translateY(0%); }
       80% { transform:translateY(-15%); }
       90% { transform:translateY(0%); }
@@ -277,21 +278,41 @@
   }
   
   @media only screen and (max-width: 768px) {
-    .bounce-two {
-        padding-top:50px;
-    }
-    .bounce-cell p{
-        font-size: 13px;
-    }
-    .bounce-circle {
-        width:70px;
-        height:70px;
-    }
-    .square {
-        width:70px;
-        height:70px;
-    }
-    .hinge {
-        margin-left:50px;
-    }
+  .bouncing {
+      height:650px;
+  }
+  .bounce {
+      color: #011a32;
+      font: 12px/1.25 'Raleway', sans-serif;
+      text-align: center;
+      width:80%;
+
+  }
+  .bouncesmall {
+      width: 100%;
+      height:100%;
+      margin-top:300px;
+  }
+  .bounce-two {
+    display:block;
+    margin-top: 250px;
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bounce-row {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    margin-top: 100px;
+    margin-left: 150px;
+  }
+  .bounce-cell {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+  }
   }

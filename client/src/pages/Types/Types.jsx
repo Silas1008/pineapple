@@ -6,7 +6,6 @@ import TypeTwo from './TypesJsx/TypeTwo';
 const Types = () => {
   return (
     <div className='typesOfAnimations'>
-    
 
     <div className='section-one'>
     <TypeOne/>
@@ -16,6 +15,7 @@ const Types = () => {
     <TypeTwo/>
     </div>
 
+    
     </div>
   )
 }

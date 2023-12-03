@@ -3,7 +3,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 .para {
   font-size: 30px;
@@ -211,14 +211,15 @@ clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 10
 .grid-animation {
   width:400px; 
   margin-left:-20px;
+  margin-top: 0;
 }
 
 .cubics {
-  
+  height:100vh;
   flex-direction:column;
   display: flex;
   justify-content: center;
- 
+  
  }
 
 .cubic img{
@@ -231,6 +232,7 @@ clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 10
 
 .css-shapes {
   height:100%;
+  margin-top: -200px;
 }
 .shape-box {
   border:none;

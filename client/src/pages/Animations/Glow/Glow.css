@@ -103,6 +103,12 @@
   }
 
   @media only screen and (max-width: 768px) {
+    .glow {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .glow-text {
       height:530px;
     }
