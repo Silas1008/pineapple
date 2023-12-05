@@ -13,6 +13,7 @@ import Snippets from './components/Snippets/Snippets';
 import ProductDetails from './components/ProductDetails/PRoductDetails';
 import OptionBar from './components/OptionBar/OptionBar';
 import Calendar from './pages/DashboardContents/Calendar/Calendar';
+import ColorPicker from './pages/DashboardContents/ColorPicker/ColorPicker';
 import TextEditor from './pages/DashboardContents/TextEditor/Text-editor';
 import TodoList from './pages/DashboardContents/TodoList/TodoList';
 import ProtectedRoute from './components/PrivateRoute';
@@ -84,7 +85,7 @@ const App = () => {
           <Route path='/bounce' element={<Bounce/>}/>
           <Route path='/color' element={<Color/>}/>
           <Route path='/glow' element={<Glow/>}/>
-          
+          <Route path='/colorpicker' element={<ColorPicker/>}/>
 
 
           <Route

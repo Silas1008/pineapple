@@ -15,6 +15,8 @@ const ColorPicker = () => {
   }
 
   return (
+
+   
     <div id='color-picker-main' className='App' style={appStyle}>
       <div className='color-dashboard'>
         <DashboardSideBar />
@@ -27,6 +29,7 @@ const ColorPicker = () => {
         />
       </div>
     </div>
+  
   );
 };
 

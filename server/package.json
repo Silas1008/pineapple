@@ -14,10 +14,7 @@
   "dependencies": {
     "axios": "^1.6.2",
     "bcrypt": "^5.1.1",
-<<<<<<< HEAD
     "body": "^5.1.0",
-=======
->>>>>>> 57d099059965abe25be65a9d24ba858dbcd51914
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
