@@ -4,12 +4,12 @@ import './Masking.scss';
 const Masking = () => {
   return (
     <div className='masking-container'>
-        <div class="masking-section">
+        <div className="masking-section">
           <h1>Image Masking in Text</h1>
         </div>
 
         <div className="masking-section3 ">
-        <div class="mask-header">CSS-MASK BOX HOVER ANIMATION 
+        <div className="mask-header">CSS-MASK BOX HOVER ANIMATION 
         </div>
           <div className="mask-box">
           <div className="button-container-1">

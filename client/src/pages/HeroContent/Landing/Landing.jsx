@@ -11,7 +11,7 @@ const Landing = () => {
    </div> 
 
     <div className='course-btn'>
-     <Link to='/sidebar'><button>Animate</button></Link>
+     <Link to='/bounce'><button>Animate</button></Link>
      <Link to='/types'><button>Animations</button></Link>
     </div>
 

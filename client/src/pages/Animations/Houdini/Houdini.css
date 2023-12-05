@@ -1,0 +1,180 @@
+.houdini {
+    height: 100vh;
+    display: block;
+    margin-top: 200px;
+}
+
+.houdini h1 {
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.placeholder {
+    background-color: #fff;
+    max-width: 100%;
+    border: 2px solid #666;
+    overflow: auto;
+    resize: both;
+    width: 600px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    width: 600px;
+    margin: 40px auto 0;
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+  
+  .houdiniCtn h1 {
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  .houdiniCtn p {
+    line-height: 1.25;
+  }
+  
+  .houdini-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .houdini-row::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+.placeholder {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+  
+  aside {
+    width: 140px;
+    margin-left: 20px;
+  }
+  
+  aside .placeholder {
+    width: 100%;
+    height: 380px;
+    margin: 0 auto;
+    background-color: #fff;
+    max-width: 100%;
+    border: 2px solid #666;
+    overflow: auto;
+    resize: both;
+  }
+
+.slot {
+  display: flex;
+  justify-content: center;
+}
+
+.placeholder {
+  background-image: paint(placeholder-box-props);
+
+  background-color: #fff;
+  width: 120px;
+  height: 120px;
+  max-height: 100vh;
+  overflow: auto;
+  resize: both;
+}
+
+.slot:nth-child(1) .placeholder {
+  border: 2px solid #fd7e14;
+}
+
+.slot:nth-child(2) .placeholder {
+  border: 6px solid #228be6;
+}
+
+.slot:nth-child(3) .placeholder {
+  border: 1rem solid #e64980;
+}
+
+@media only screen and (max-width: 768px) {
+  .houdini {
+    height: 100%;
+    display: block;
+    margin-top: 200px;
+}
+
+.houdini h1 {
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.placeholder {
+    background-color: #fff;
+    max-width: 100%;
+    border: 2px solid #666;
+    overflow: auto;
+    resize: both;
+    width: 600px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1;
+    margin-left: 40px;
+  }
+  
+  .houdiniCtn h1 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  
+  .houdiniCtn p {
+    line-height: 1.25;
+    font-size: 15px;
+  }
+  
+  .houdini-row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  aside .placeholder {
+    display: none;
+  }
+
+.slot {
+  display: flex;
+  justify-content: center;
+}
+
+.placeholder {
+  background-image: paint(placeholder-box-props);
+  background-color: #fff;
+  width: 120px;
+  height: 120px;
+  max-height: 100vh;
+  overflow: auto;
+  resize: both;
+}
+
+}

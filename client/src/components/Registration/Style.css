@@ -5,6 +5,7 @@
     justify-content: center;
     width:100vw;
     height:80vh;
+    margin-top: 150px;
 }
 .logging-animate,
 .signing-animate {
@@ -100,6 +101,7 @@
     .signing,
     .logging{
         height:100%;
+        margin-top: 50px;
     }
     .signAnimate {
         display:none;

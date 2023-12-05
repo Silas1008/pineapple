@@ -1,5 +1,10 @@
 .option-container {
     overflow-x: auto;
+    position: relative;
+    top:50px;
+    position:fixed;
+    width:100%;
+    z-index:9999;
   }
   
   .courses {

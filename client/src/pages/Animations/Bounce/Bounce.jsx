@@ -11,9 +11,7 @@ const Bounce = () => {
           <h1>Hover over text to pause.</h1><br/>
             </div>
           </div>
-
           <div/>
-          
         </div>
          <div className='bouncesmall'>
               <p ><small>Inspired by <a href="https://dribbble.com/shots/3281814-Solitary-Saunter">Tomas Brunsdon</a>.</small></p>
@@ -35,7 +33,7 @@ const Bounce = () => {
           </div>
 
           <div className="bounce-cell">
-            <div className="bounce-circle bounce"></div>
+            <div className="bounce-circle bounce1"></div>
             <p >bounce</p>
           </div>
         </div>
